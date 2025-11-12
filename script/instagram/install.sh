@@ -1,14 +1,9 @@
-
 #!/bin/bash
 
-sudo mkdir /usr/local/icons
-clear
 echo "Installing Instagram..."
 sleep 5
-wget  https://raw.githubusercontent.com/pembri/Chromium-Apps/refs/heads/main/icons/instagram.png
 sudo apt update
 sudo apt install chromium
-sudo mv instagram.png /usr/local/icons
 echo "#!/bin/bash
 
 chromium --no-sandbox --app=https://instagram.com --class=instagram" > instagram
@@ -21,7 +16,7 @@ Terminal=false
 Type=Application
 Name=Instagram
 Exec=/usr/local/bin/instagram
-Icon=/usr/local/icons/instagram.png
+Icon=instagram
 Categories=Network;WebBrowser;
 StartupWMClass=threads" > instagram.desktop
 mv instagram.desktop /usr/share/applications
